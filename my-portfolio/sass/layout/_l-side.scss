@@ -1,0 +1,12 @@
+@use "../global" as global;
+
+.l-side {
+  flex-basis: 20%;
+  position: relative;
+  padding: 50px 20px;
+  background-color: global.$main-color;
+
+  @include global.mq("sp") {
+    display: none;
+  }
+}

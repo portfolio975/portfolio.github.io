@@ -1,0 +1,60 @@
+@use "../global" as global;
+
+.p-header {
+  // height: 500vh;
+
+  @include global.mq("tab") {
+    // height: 400vh;
+  }
+}
+
+.p-header__container {
+  width: 160px;
+  margin: 0 auto;
+  position: sticky;
+  top: 50px;
+}
+
+.p-header__logo {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  padding: 14px 0;
+  letter-spacing: 0.06em;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.p-header__nav {
+  margin-top: 60px;
+}
+
+.p-header__nav-lists {
+  text-align: center;
+}
+
+.p-header__nav-list {
+  margin-top: 24px;
+}
+
+.p-header__nav-link {
+  display: block;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.p-header__icon {
+  display: block;
+  font-size: 24px;
+}
+
+.p-header__nav-link-text {
+  display: block;
+  font-size: 14px;
+}
