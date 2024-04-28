@@ -1,0 +1,13 @@
+@use "../global" as global;
+
+.l-main {
+  flex-basis: 80%;
+  padding-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include global.mq("sp") {
+    width: 100%;
+    flex-basis: content;
+  }
+}
