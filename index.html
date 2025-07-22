@@ -8,8 +8,8 @@
   <title>ポートフォリオサイト</title>
   <!-- OGP -->
   <!-- <meta property="og:url" content="ページのURL">
-  <meta property="og:title" content="#見つけて尾道レトロキャンペーン!">
-  <meta property="og:description" content="あなたの見つけたレトロな尾道の一枚をInstagramに投稿しよう">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <meta property="og:type" content="website">
   <meta property="og:image" content="./img/OGP.png"> -->
   <!-- favicon -->
@@ -18,6 +18,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css"
+  />
+  <!-- wow.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <!-- Font Awesome -->
   <!-- <link
   rel="stylesheet"
@@ -119,7 +126,7 @@
       <!-- p-about -->
       <section id="about" class="p-about">
         <div class="p-about__inner l-inner">
-          <h2 class="c-heading">
+          <h2 class="c-heading p-fade__in-up js-in-view">
             <span class="c-heading__en">Message</span><br>
             <!-- <span class="c-heading__ja">ご依頼をお考えの方へ</span> -->
             <span class="c-heading__ja">メッセージ</span>
@@ -132,7 +139,7 @@
       <!-- p-skill -->
       <section id="skill" class="p-skill">
         <div class="p-skill__inner l-inner">
-          <h2 class="c-heading">
+          <h2 class="c-heading p-fade__in-up js-in-view">
             <span class="c-heading__en">Skill</span><br>
             <span class="c-heading__ja">スキル</span>
           </h2>
@@ -141,7 +148,7 @@
               <div class="p-skill__icon"><i class="fab fa-html5"></i></div>
               <div class="p-skill__text-block">
                 <p class="p-skill__heading">HTML5/CSS3/Sass</p>
-                <p class="p-skill__text">エディタはVisual Studio Codeを使用しています。CSS設計はSassを使いBEMやFLOCSSを取り入れ、納品後もメンテナンスや管理をしやすい設計を心がけております。レスポンシブ対応可能です。
+                <p class="p-skill__text">エディタはVisual Studio Codeを使用しています。CSS設計ではSassを使いBEMやFLOCSSを取り入れ、納品後もメンテナンスや管理をしやすい設計を心がけております。レスポンシブ対応可能です。
                 </p>
               </div>
             </div>
@@ -149,14 +156,14 @@
               <div class="p-skill__icon"><i class="fab fa-js-square"></i></div>
               <div class="p-skill__text-block">
                 <p class="p-skill__heading">JavaScript/jQuery</p>
-                <p class="p-skill__text">swiperを使ったスライド制作、ドロワーメニュー、アコーディオンメニュー等の記述ができます。実績紹介のサイトから参考にしていただけると幸いです。</p>
+                <p class="p-skill__text">swiperを使ったスライド制作、ドロワーメニュー、アコーディオンメニュー等の基本機能を使用できます。</p>
               </div>
             </div>
             <div class="p-skill__content">
               <div class="p-skill__icon"><i class="fab fa-wordpress"></i></div>
               <div class="p-skill__text-block">
                 <p class="p-skill__heading">WordPress</p>
-                <p class="p-skill__text">現在勉強中ですが、今のスキルでワードプレス化したサイトを実績紹介より公開しておりますので、ぜひご参照ください。</p>
+                <p class="p-skill__text">独学で静的サイトをWordPressテーマとして再構築した経験があります。header.phpやfunctions.phpの分割構成、テンプレート階層、カスタム投稿タイプなどの基本操作ができます。また、ブロックテーマにも対応できるように学習しています。</p>
               </div>
             </div>
             <div class="p-skill__content">
@@ -184,7 +191,8 @@
               <div class="p-skill__icon"><i class="fab fa-github-square"></i></div>
               <div class="p-skill__text-block">
                 <p class="p-skill__heading">Git/GitHub</p>
-                <p class="p-skill__text">現在勉強中です。Sourcetreeを使用して、ローカルリポジトリからリモートリポジトリに同期させることができます。
+                <p class="p-skill__text">
+                  実務での使用は未経験ですが、独学でVisual Studio Codeからのコミット・プッシュ操作や、Sourcetreeを用いたローカル・リモートリポジトリの同期を学びました。
                 </p>
               </div>
             </div>
@@ -194,7 +202,7 @@
       <!-- p-works -->
       <section id="works" class="p-works">
         <div class="p-works__inner l-inner">
-          <h2 class="c-heading">
+          <h2 class="c-heading p-fade__in-up js-in-view">
             <span class="c-heading__en">Works</span><br>
             <span class="c-heading__ja">実績紹介</span>
           </h2>
@@ -249,16 +257,17 @@
               </div>
             </div>
             <div class="p-works__item">
-              <a href="https://portfolio303.com/" target="_blank" class="p-works__img"><img src="./img/site3.png" alt="実績3"></a>
+              <!-- <a href="https://portfolio303.com/" target="_blank" class="p-works__img"><img src="./img/site9.png" alt="実績3"></a> -->
+              <a href="https://roku303.com/" target="_blank" class="p-works__img"><img src="./img/site9.png" alt="実績3"></a>
               <div class="p-works__table-block">
                 <table class="p-works__table">
                   <tr class="p-works__tr">
                     <th class="p-works__item-name">サイト名</th>
                     <th class="p-works__item-detail ">
-                      <a href="#"   class="p-works__link-underline" target="_blank">Global Standard（WordPress）</a>
-                      <p class="p-works__notes">
+                      <a href="https://roku303.com/" class="p-works__link-underline" target="_blank">みなみ歯科クリニック（WordPress）</a>
+                      <!-- <p class="p-works__notes">
                         ※現在公開を停止しています。
-                      </p>
+                      </p> -->
                     </th>
                   </tr>
                   <tr class="p-works__tr">
@@ -267,11 +276,12 @@
                   </tr>
                   <tr class="p-works__tr">
                     <th class="p-works__item-name">制作期間</th>
-                    <th class="p-works__item-detail">3週間</th>
+                    <th class="p-works__item-detail">1カ月</th>
                   </tr>
                   <tr class="p-works__tr">
                     <th class="p-works__item-name">コメント</th>
-                    <th class="p-works__item-detail">ワードプレスのオリジナルテーマで作った架空コーポレートサイトです。サイトは５つの固定ページとお問い合わせフォーム、投稿ページで構成しています。コーディングはPHPで行い、ローカル環境で開発後、本番環境に移行してサイトを公開しました。CSS設計は「FLOCSS」で記述しています。<br><br>※BASIC認証をかけておりますので下記ユーザー名・パスワードでログインをお願いいたします。<br><br>ユーザー名：portfolio<br>パスワード：portfolio594</th>
+                    <th class="p-works__item-detail">WordPressオリジナルテーマで作った架空の歯科クリニックサイトです。固定ページ・投稿・カスタム投稿などを活用し、更新しやすい構成に仕上げています。<br>コーディングはPHPで行い、ローカル環境で開発後、本番環境に移行してサイトを公開しました。CSS設計はSassを使用した「FLOCSS」で記述しています。<br><br>※BASIC認証をかけておりますので下記ユーザー名・パスワードでログインをお願いいたします。<br><br>ユーザー名：site<br>パスワード：site505</th>
+                    <!-- <th class="p-works__item-detail">ワードプレスのオリジナルテーマで作った架空コーポレートサイトです。サイトは５つの固定ページとお問い合わせフォーム、投稿ページで構成しています。コーディングはPHPで行い、ローカル環境で開発後、本番環境に移行してサイトを公開しました。CSS設計は「FLOCSS」で記述しています。<br><br>※BASIC認証をかけておりますので下記ユーザー名・パスワードでログインをお願いいたします。<br><br>ユーザー名：portfolio<br>パスワード：portfolio594</th> -->
                   </tr>
                 </table>
               </div>
@@ -345,6 +355,29 @@
                 </table>
               </div>
             </div>
+            <div class="p-works__item">
+              <a href="https://portfolio975.github.io/toradigi-gallery/" target="_blank" class="p-works__img"><img src="./img/site8.png" alt="実績8"></a>
+              <div class="p-works__table-block">
+                <table class="p-works__table">
+                  <tr class="p-works__tr">
+                    <th class="p-works__item-name">サイト名</th>
+                    <th class="p-works__item-detail "><a href="https://portfolio975.github.io/toradigi-gallery/" target="_blank" class="p-works__link-underline">トラデジギャラリー</a></th>
+                  </tr>
+                  <tr class="p-works__tr">
+                    <th class="p-works__item-name">使用言語</th>
+                    <th class="p-works__item-detail">HTML5/CSS3/Sass/jQuery</th>
+                  </tr>
+                  <tr class="p-works__tr">
+                    <th class="p-works__item-name">制作期間</th>
+                    <th class="p-works__item-detail">1週間</th>
+                  </tr>
+                  <tr class="p-works__tr">
+                    <th class="p-works__item-name">コメント</th>
+                    <th class="p-works__item-detail">Figmaのデザインカンプからコーディングした架空のギャラリーサイトです。ファーストビューにはswiperを使用したスライダーを実装しています。また、「Works」では各カードの絞り込みが可能で、カテゴリーやタグを選択すると、関連するカードが表示されます。</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -360,6 +393,8 @@
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- wow.js -->
+  <script>new WOW().init();</script>
   <!-- script.js -->
   <script src="./js/script.js"></script>
 </body>

@@ -340,6 +340,10 @@ a {
   opacity: 0.6;
 }
 
+.p-header__nav-link.active {
+  color: #FFFFFF;
+}
+
 .p-header__icon {
   display: block;
   font-size: 24px;
@@ -400,6 +404,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 60px 44px;
@@ -434,7 +442,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 47%;
+  max-width: 100%;
   gap: 24px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -461,12 +469,7 @@ a {
 }
 
 .p-skill__img {
-  width: 160px;
-}
-@media screen and (min-width: 768px) and (max-width: 1076px) {
-  .p-skill__img {
-    width: 86px;
-  }
+  width: 74px;
 }
 @media screen and (max-width: 767px) {
   .p-skill__img {
@@ -481,6 +484,11 @@ a {
 @media screen and (max-width: 375px) {
   .p-skill__img {
     width: 148px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .p-skill__img {
+    width: 109px;
   }
 }
 .p-works {
@@ -609,6 +617,45 @@ a {
 .p-works__notes {
   color: red;
   font-weight: bold;
+}
+
+.p-fade__in-up {
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+          transform: translateY(24px);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+.p-fade__in-up.is-in-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.p-fade__in-down {
+  opacity: 0;
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+.p-fade__in-down.is-in-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.p-fade__in {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.p-fade__in.is-in-view {
+  opacity: 1;
 }
 
 @media screen and (min-width: 1100px) {

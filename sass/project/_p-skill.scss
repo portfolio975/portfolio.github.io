@@ -11,6 +11,7 @@
 .p-skill__contents {
   margin-top: 60px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 60px 44px;
   justify-content: center;
@@ -31,7 +32,7 @@
 
 .p-skill__content {
   display: flex;
-  max-width: 47%;
+  max-width: 100%;
   gap: 24px;
   align-items: center;
 
@@ -62,11 +63,7 @@
 }
 
 .p-skill__img {
-  width: 160px;
-
-  @media screen and (min-width:768px) and ( max-width:1076px) {
-    width: 86px;
-  }
+  width: 74px;
 
   @include global.mq("sp") {
     width: 86px;
@@ -80,6 +77,9 @@
     width: 148px;
   }
 
+  @media screen and (min-width:768px) and ( max-width:1000px) {
+    width: 109px;
+  }
 
 
   img {

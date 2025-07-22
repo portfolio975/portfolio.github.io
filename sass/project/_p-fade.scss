@@ -1,0 +1,32 @@
+@use "../global" as global;
+
+.p-fade__in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s, transform 1s;
+
+  &.is-in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p-fade__in-down {
+  opacity: 0;
+  transform: translateY(-24px);
+  transition: opacity 1s, transform 1s;
+
+  &.is-in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p-fade__in {
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.is-in-view {
+    opacity: 1;
+  }
+}

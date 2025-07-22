@@ -49,6 +49,10 @@
   }
 }
 
+.p-header__nav-link.active {
+  color: global.$text-color-white;
+}
+
 .p-header__icon {
   display: block;
   font-size: 24px;
